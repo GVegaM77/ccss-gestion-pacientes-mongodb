@@ -1,0 +1,18 @@
+ok 1 - conexión: ping al servidor
+ok 2 - validación $jsonSchema rechaza una cédula inválida
+ok 3 - índice único impide cédulas duplicadas
+ok 4 - CRUD de pacientes: crear, leer, actualizar, borrado lógico
+ok 5 - usuarios: guarda hash, no lo devuelve y autentica
+ok 6 - bitácora es de solo inserción
+ok 7 - hash scrypt: verifica correctamente
+ok 8 - funciones: IMC, presión, resultado de laboratorio, edad
+ok 9 - $function en el servidor clasifica a todos los pacientes
+ok 10 - vistas: las 7 existen y se pueden consultar
+ok 11 - procedimiento: registrarConsulta confirma la transacción completa
+ok 12 - procedimiento: rollback si falla una parte (alergia y violación de esquema)
+ok 13 - cursores: la paginación por keyset recorre todo sin repetir
+ok 14 - cursores: recorrerPacientes procesa todos los activos
+ok 15 - GridFS: subir y descargar una imagen médica
+# tests 15
+# pass 15
+# fail 0

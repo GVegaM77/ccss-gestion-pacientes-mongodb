@@ -1,0 +1,24 @@
+1) sp_registrar_consulta (paciente sin alergias):
+{
+  consulta_id: new ObjectId('6af3dfde8918897f365f0397'),
+  prescripcion_id: new ObjectId('6af3dfde8918897f365f0398'),
+  examenes_ids: [ new ObjectId('6af3dfde8918897f365f0399') ]
+}
+
+2) sp_registrar_consulta con alergia (debe fallar y hacer ROLLBACK):
+  Error esperado: Alergia detectada: el paciente es alérgico a "Penicilina V".
+  Consultas antes/después: 1006 / 1006
+
+2b) Rollback real: el examen viola el $jsonSchema DESPUÉS de insertar la consulta:
+  Error esperado: Document failed validation
+  Consultas antes/después: 1006 / 1006 (la consulta insertada se deshizo)
+
+3) sp_consultar_expediente:
+  Ana: 4 consultas, 1 prescripciones activas, 2 exámenes
+
+4) sp_finalizar_prescripciones_vencidas:
+  { revisadas: 589, finalizadas: 589 }
+
+5) sp_registrar_cirugia_realizada:
+  Hernioplastia -> realizada | etapas: 1
+  Segundo intento (esperado): La cirugía no existe o ya fue registrada como realizada.

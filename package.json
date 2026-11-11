@@ -1,0 +1,26 @@
+{
+  "name": "ccss-gestion-pacientes-mongodb",
+  "version": "0.2.0",
+  "description": "Sistema de gestión de pacientes para hospitales de la CCSS - capa de datos en MongoDB (Avance 2)",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "db:ping": "node scripts/ping.js",
+    "db:setup": "node database/setup.js",
+    "db:seed": "node database/seed.js",
+    "db:vistas": "node database/vistas.js",
+    "db:diccionario": "node scripts/diccionario.js",
+    "db:init": "npm run db:setup && npm run db:seed && npm run db:vistas",
+    "demo:crud": "node scripts/demo_crud.js",
+    "demo:procedimientos": "node scripts/demo_procedimientos.js",
+    "demo:funciones": "node scripts/demo_funciones.js",
+    "demo:cursores": "node scripts/demo_cursores.js",
+    "demo:vistas": "node scripts/demo_vistas.js",
+    "test": "node scripts/pruebas.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "mongodb": "^6.8.0"
+  },
+  "license": "UNLICENSED"
+}

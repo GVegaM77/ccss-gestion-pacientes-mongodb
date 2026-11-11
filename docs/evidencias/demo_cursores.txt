@@ -1,0 +1,14 @@
+1) recorrerPacientes: 200 pacientes procesados en lotes de 50 (46 alergias en total)
+2) pacientesConAlergias(3):
+┌─────────┬─────────────┬─────────────────────────┬──────┬────────────────┐
+│ (index) │ cedula      │ nombre                  │ edad │ alergias       │
+├─────────┼─────────────┼─────────────────────────┼──────┼────────────────┤
+│ 0       │ '200000007' │ 'Luis Campos Castro'    │ 32   │ [ 'mariscos' ] │
+│ 1       │ '200000025' │ 'Sofía Campos Chaves'   │ 57   │ [ 'látex' ]    │
+│ 2       │ '200000040' │ 'José Campos Hernández' │ 65   │ [ 'aspirina' ] │
+└─────────┴─────────────┴─────────────────────────┴──────┴────────────────┘
+3) paginarConsultas: página 1 -> 3 consultas
+   página 2 -> 3 consultas
+   página 3 -> 2 consultas
+4) exportarConsultasCSV: { filas: 1006, ruta: 'exports/consultas.csv' }
+5) vigilarColeccion (change stream): eventos recibidos -> update

@@ -1,0 +1,23 @@
+
+=== PACIENTES ===
+CREATE  -> 6af3dfddac59490fbb409df6 Prueba
+READ    -> 999000111
+UPDATE  -> { telefono: '8888-0000', correo: 'demo@correo.cr' }
+LIST    -> 3 de 201 pacientes activos
+DELETE (lógico) -> true | activo = false
+
+=== CONSULTAS ===
+CREATE  -> 6af3dfddac59490fbb409df7
+UPDATE  -> Actualizado en demo
+DELETE  -> true
+
+=== USUARIOS (con hash) ===
+CREATE  -> demo_user | campos devueltos: _id, activo, username, rol, centro_id
+LOGIN ok -> true | LOGIN mal -> false
+DESACTIVAR -> true
+
+=== CENTROS (búsqueda geoespacial) ===
+Centros a menos de 3 km: HSJD, HCG
+
+=== BITÁCORA (solo inserción) ===
+actualizar disponible? undefined | eliminar disponible? undefined

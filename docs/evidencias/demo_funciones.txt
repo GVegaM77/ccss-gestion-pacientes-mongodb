@@ -1,0 +1,14 @@
+calcularEdad("1990-05-17")        -> 36
+calcularIMC(72, 1.70)             -> 24.9 Normal
+clasificarPresion("135/85")       -> Elevada
+interpretarResultado(8, 11–17)    -> bajo
+
+$function ejecutada en el servidor (pacientes por grupo etario):
+┌─────────┬────────────────────────┬───────────┐
+│ (index) │ grupo                  │ pacientes │
+├─────────┼────────────────────────┼───────────┤
+│ 0       │ 'Adultez'              │ 114       │
+│ 1       │ 'Persona adulta mayor' │ 52        │
+│ 2       │ 'Niñez'                │ 22        │
+│ 3       │ 'Adolescencia'         │ 12        │
+└─────────┴────────────────────────┴───────────┘
